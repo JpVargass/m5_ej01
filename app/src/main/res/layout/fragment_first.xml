@@ -31,6 +31,7 @@
         android:ems="10"
         android:hint="Sitio Web"
         android:inputType="text"
+        android:textColor="@color/paleta1"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
