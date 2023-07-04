@@ -65,11 +65,10 @@ public class FirstFragment extends Fragment {
         // Inflate the layout for this fragment
         binding = FragmentFirstBinding.inflate(getLayoutInflater(), container, false);
         binding.buttonVerWeb.setOnClickListener(v -> {
-            String URL= binding.editTextWeb.getText().toString();
+            String url= binding.editTextWeb.getText().toString();
 
             getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView,
-                    SecondFragment.newInstance(URL, ""),
-                    "").commit();   // ** IMPORTANTE EL .commit()
+                    SecondFragment.newInstance(url,""),"Second").addToBackStack(null).commit();
 
         });
         return binding.getRoot();

@@ -63,14 +63,14 @@ public class SecondFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        FragmentSecondBinding binding= FragmentSecondBinding.inflate(getLayoutInflater(),container,false);
         binding = FragmentSecondBinding.inflate(getLayoutInflater(), container, false);
-        binding.buttonFinalizar.setOnClickListener (v -> {
-            FragmentManager fm = getActivity().getSupportFragmentManager();
-            fm.popBackStack();
-        });
-
         binding.webSite.loadUrl(mParam1);
-        return  binding.getRoot();
-
+        binding.buttonFinalizar.setOnClickListener(v -> {
+                    FragmentManager fm = getActivity().getSupportFragmentManager();
+                    fm.popBackStack();
+                }
+        );
+        return binding.getRoot();
     }
 }
