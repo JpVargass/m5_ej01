@@ -4,27 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/paleta2"
     tools:context=".MainActivity">
 
-    <FrameLayout
-        android:layout_width="403dp"
-        android:layout_height="378dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="1dp">
-
-        <TextView
-            android:layout_width="355dp"
-            android:layout_height="55dp"
-            android:text="URL Aqui" />
-
-    </FrameLayout>
-
-    <Button
-        android:id="@+id/buttonFirstFragment"
-        android:layout_width="242dp"
-        android:layout_height="58dp"
-        android:text="Ver"
-        tools:layout_editor_absoluteX="105dp"
-        tools:layout_editor_absoluteY="478dp" />
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="cl.jpvs.m5_ej01.FirstFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

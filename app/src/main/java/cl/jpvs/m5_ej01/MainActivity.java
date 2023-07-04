@@ -12,18 +12,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-
-
-        binding.buttonFirstFragment.setOnClickListener(v -> {
-                    showFirstFragment();
-                }
-        );
-    }
-
-    private void showFirstFragment() {
-        FirstFragment firstFragment = FirstFragment.newInstance("","");
-        getSupportFragmentManager().beginTransaction().replace(R.id.mainContainer, firstFragment, "First").commit();
+        setContentView(R.layout.activity_main);
     }
 }
